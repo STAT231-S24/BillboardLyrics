@@ -1,6 +1,6 @@
 library(tidyverse)
-XX <-  # change this name
-  readr::read_csv("data-raw/pdga-approved-disc-golf-discs_2020-10-04T15-02-04.csv") |>
+BillboardLyrics <-  
+  readr::read_csv("billboard_lyrics_1964-2015.csv") |>
   janitor::clean_names() |>
   mutate(
     model = iconv(disc_model, "latin1", "ASCII", sub = ""),
@@ -19,4 +19,4 @@ XX <-  # change this name
     approved_date, class, diameter, flexibility, height,
     manufacturer, model, rim_depth, rim_thickness, weight
   )
-usethis::use_data(XX, overwrite = TRUE)  # change this name
+usethis::use_data(BillboardLyrics, overwrite = TRUE)  # change this name
