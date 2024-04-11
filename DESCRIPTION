@@ -1,0 +1,20 @@
+Package: XX
+Date: 2024-01-01
+Title: What the Package Does (One Line, Title Case)
+Version: 0.1
+Authors@R: 
+    person(
+      given = "First", 
+      family = "Last", 
+      email = "first.last@example.com", 
+      role = c("aut", "cre")
+    )
+Description: What the package does (one paragraph).
+  Indent subsequent lines
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 4.2)
+LazyData: true
