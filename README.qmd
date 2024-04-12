@@ -11,7 +11,8 @@ editor: source
 #| label: setup
 #| include: false
 library(tidyverse)
-library(DiscGolf)   # replace with your package
+library(mosaic)
+library(BillboardLyrics)   # replace with your package
 ```
 
 This file describes the XX package.
@@ -21,13 +22,14 @@ The package is interesting because XX, YY, and ZZ.
 The XX package can be installed by running:
 
 ```
-devtools::install_github("YY/XX")
-library(XX)
+devtools::install_github("STAT231-S24/BillboardLyrics")
+library(BillboardLyrics)
 ```
 
 ```{r}
-packageVersion("DiscGolf")
-glimpse(DiscGolf)
+packageVersion("BillboardLyrics")
+glimpse(BillboardLyrics)
+mosaic::tally(~ artist, data = BillboardLyrics)
 ```
 
 Here are some sample analyses:

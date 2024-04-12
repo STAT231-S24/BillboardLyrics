@@ -1,22 +1,6 @@
 library(tidyverse)
 BillboardLyrics <-  
-  readr::read_csv("billboard_lyrics_1964-2015.csv") |>
-  janitor::clean_names() |>
-  mutate(
-    model = iconv(disc_model, "latin1", "ASCII", sub = ""),
-    approved_date = lubridate::mdy(approved_date)
-  ) |>
-  rename(
-    diameter = diameter_cm,
-    flexibility = flexibility_kg,
-    height = height_cm,
-    manufacturer = manufacturer_distributor,
-    rim_depth = rim_depth_cm,
-    rim_thickness = rim_thickness_cm,
-    weight = max_weight_gr
-  ) %>%
-  select(
-    approved_date, class, diameter, flexibility, height,
-    manufacturer, model, rim_depth, rim_thickness, weight
-  )
+  readr::read_csv("data-raw/billboard_lyrics_1964_2015.csv") |>
+  janitor::clean_names()
 usethis::use_data(BillboardLyrics, overwrite = TRUE)  # change this name
+
