@@ -15,6 +15,7 @@ library(mosaic)
 library(BillboardLyrics)   # replace with your package
 ```
 
+
 This file describes the XX package.
 
 The package is interesting because XX, YY, and ZZ.
@@ -26,13 +27,16 @@ devtools::install_github("STAT231-S24/BillboardLyrics")
 library(BillboardLyrics)
 ```
 
+
 ```{r}
 packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
 mosaic::tally(~ artist, data = BillboardLyrics)
 ```
 
+
 Here are some sample analyses:
+
 
 ```{r}
 BillboardLyrics |>
@@ -47,4 +51,6 @@ BillboardLyrics |>
   pull(lyrics)
 ```
 
+
 ZZ
+
