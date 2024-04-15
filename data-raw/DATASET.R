@@ -2,5 +2,5 @@ library(tidyverse)
 BillboardLyrics <-  
   readr::read_csv("data-raw/billboard_lyrics_1964_2015.csv") |>
   janitor::clean_names()
-usethis::use_data(BillboardLyrics, overwrite = TRUE)  # change this name
+usethis::use_data(BillboardLyrics, overwrite = TRUE)
 

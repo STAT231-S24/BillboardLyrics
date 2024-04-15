@@ -1,7 +1,7 @@
 ---
-title: "XX DATA PACKAGE"
-author: "YOUR NAME"
-date: "2024-01-01"
+title: "Billboard Lyrics"
+author: "Vy Doan & Mia Nakamura"
+date: "2024-04-12"
 date-format: iso
 format: gfm
 editor: source
@@ -12,14 +12,14 @@ editor: source
 #| include: false
 library(tidyverse)
 library(mosaic)
-library(BillboardLyrics)   # replace with your package
+library(BillboardLyrics)
 ```
 
-This file describes the XX package.
+This file describes the BillboardLyrics package.
 
-The package is interesting because XX, YY, and ZZ.
+The package is interesting as it offers the opportunity to conduct diverse analyses on Billboard's Top 100 Songs, covering the period from 1946 to 2015. Through it, we can delve into the evolution of popular music preferences over time, shedding light on the dynamic shifts in popular music over the decades. For instance, we can evaluate the success of individual artists or bands by monitoring their frequency on the Top 100 list, examining the longevity of their careers, and discerning the impact of specific songs on their overall achievements.
 
-The XX package can be installed by running:
+The BillboardLyrics package can be installed by running:
 
 ```
 devtools::install_github("STAT231-S24/BillboardLyrics")
@@ -29,7 +29,6 @@ library(BillboardLyrics)
 ```{r}
 packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
-mosaic::tally(~ artist, data = BillboardLyrics)
 ```
 
 Here are some sample analyses:
@@ -47,4 +46,10 @@ BillboardLyrics |>
   pull(lyrics)
 ```
 
-ZZ
+```{r}
+BillboardLyrics |>
+  head(4) |>
+  tail(1) |>
+  pull(lyrics)
+# note: some of the words are spelled interestingly, such as "miiiind" and "shooooes"
+```
