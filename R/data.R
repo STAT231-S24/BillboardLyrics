@@ -1,14 +1,21 @@
 #' Billboard Lyrics
 #'
-#' This is more descriptive text about my data.
-#' Even more info is provided here ...
+#' This package contains data pertaining to Billboard's Top 100 Songs from 1964 to 2015. 
+#' It encompasses details such as artist names, song titles, release years, song lyrics, and rankings. 
+#' Equipped with this comprehensive information, users can extract insights into the evolving realm of 
+#' music preferences over the years, assess the achievements of individual artists, 
+#' and uncover a variety of additional insights.
 #'
 #' @format ## `BillboardLyrics`
-#' A data frame with XX rows and XX columns:
+#' A data frame with 5100 rows and 6 columns:
 #' \describe{
-#'   \item{lines}{lines of text}
-#'   \item{author}{who wrote that line}
+#'   \item{rank}{position on Billboard's Top 100}
+#'   \item{song}{title of the song}
+#'   \item{artist}{performer of the song}
+#'   \item{year}{year the song was released}
+#'   \item{lyrics}{lyrical content of the song}
+#'   \item{source}{}
 #'   ...
 #' }
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
+#' @source <https://github.com/walkerkq/musiclyrics/blob/master/billboard_lyrics_1964-2015.csv>
 "BillboardLyrics"

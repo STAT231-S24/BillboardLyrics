@@ -51,5 +51,4 @@ BillboardLyrics |>
   head(4) |>
   tail(1) |>
   pull(lyrics)
-# note: some of the words are spelled interestingly, such as "miiiind" and "shooooes"
 ```
