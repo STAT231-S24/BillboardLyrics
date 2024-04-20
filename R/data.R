@@ -14,7 +14,7 @@
 #'   \item{artist}{performer of the song}
 #'   \item{year}{year the song was released}
 #'   \item{lyrics}{lyrical content of the song}
-#'   \item{source}{}
+#'   \item{source}{whether the song's lyrics originated from metrolyrics.com (source 1), songlyrics.com (source 2), or were simply unavailable (source 3)}
 #'   ...
 #' }
 #' @source <https://github.com/walkerkq/musiclyrics/blob/master/billboard_lyrics_1964-2015.csv>
