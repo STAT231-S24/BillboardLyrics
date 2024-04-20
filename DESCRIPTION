@@ -9,6 +9,12 @@ Authors@R:
       email = "vdoan26@amherst.edu",
       role = c("aut", "cre")
     )
+    person(
+    given = "Mia",
+    family = "Nakamura",
+    email = "mknakamura26@amherst.edu",
+    role = c("aut", "cre")
+    )
 Description: This package contains data pertaining to Billboard's Top 100 Songs from 1964 to 2015. 
   It encompasses details such as artist names, song titles, release years, song lyrics, and rankings. 
   Equipped with this comprehensive information, users can extract insights into the evolving realm of 
