@@ -1,7 +1,7 @@
 Package: BillboardLyrics
 Date: 2024-04-16
 Title: Rankings of the Top 100 Billboard Songs from 1964 to 2015
-Version: 0.6
+Version: 0.7
 Authors@R: 
     person(
       given = "Vy",
@@ -16,7 +16,8 @@ Authors@R:
       role = c("aut", "cre")
     )
 Description: This package contains data pertaining to Billboard's Top 100 Songs from 1964 to 2015. 
-  It encompasses details such as artist names, song titles, release years, song lyrics, and rankings. 
+  The data were made available at https://github.com/walkerkq/musiclyrics.
+  The dataset includes fields such as artist names, song titles, release years, song lyrics, and rankings. 
   Equipped with this comprehensive information, users can extract insights into the evolving realm of 
   music preferences over the years, assess the achievements of individual artists, 
   and uncover a variety of additional insights.
