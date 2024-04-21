@@ -31,7 +31,11 @@ packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
 ```
 
-Here are some sample analyses:
+**Limitation**
+
+Within this package, certain song lyrics exhibit irregular spacing. For instance, in "Wooly Bully" by Sam the Sham and the Pharaohs, there's a spacing anomaly in the line "...sam the sham the pharaohs domingo..." where extra spaces surround "the pharaohs".
+
+**Sample Analyses:**
 
 ```{r}
 BillboardLyrics |>

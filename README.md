@@ -22,7 +22,7 @@ The BillboardLyrics package can be installed by running:
 packageVersion("BillboardLyrics")
 ```
 
-    [1] '0.2'
+    [1] '0.6'
 
 ``` r
 glimpse(BillboardLyrics)
@@ -37,7 +37,14 @@ glimpse(BillboardLyrics)
     $ lyrics <chr> "sam the sham miscellaneous wooly bully wooly bully sam the sha…
     $ source <dbl> 3, 1, 1, 1, 1, 1, 3, 5, 1, 3, 3, 1, 3, 1, 3, 3, 3, 3, 1, 1, 1, …
 
-Here are some sample analyses:
+**Limitation**
+
+Within this package, certain song lyrics exhibit irregular spacing. For
+instance, in “Wooly Bully” by Sam the Sham and the Pharaohs, there’s a
+spacing anomaly in the line “…sam the sham the pharaohs domingo…” where
+extra spaces surround “the pharaohs”.
+
+**Sample Analyses:**
 
 ``` r
 BillboardLyrics |>
@@ -64,7 +71,3 @@ BillboardLyrics |>
 ```
 
     [1] "when i woke up this morning you were on my mind and you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind so i went to the corner just to ease my pains yeah just to ease my pains i got troubles whoaoh i got worries whoaoh i came home again when i woke up this morning you were on my miiiind and you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind and i got a feelin down in my shooooooes said way down in my shooooes yeah i got to ramble whoaoh i got to move on whoaoh i got to walk away my blues when i woke up this morning you were on my mind you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind"
-
-``` r
-# note: some of the words are spelled interestingly, such as "miiiind" and "shooooes"
-```
