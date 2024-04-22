@@ -31,9 +31,9 @@ packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
 ```
 
-**Limitation**
+**Limitations**
 
-Within this package, certain song lyrics exhibit irregular spacing. For instance, in "Wooly Bully" by Sam the Sham and the Pharaohs, there's a spacing anomaly in the line "...sam the sham the pharaohs domingo..." where extra spaces surround "the pharaohs".
+Within this package, certain song lyrics exhibit irregular spacing. For instance, in "Wooly Bully" by Sam the Sham and the Pharaohs, there's a spacing anomaly in the line "...sam the sham the pharaohs domingo..." where extra spaces surround "the pharaohs". Also, in "I Can't Help Myself Sugar Pie Honey Bunch", for some of the lyrics there is no spacing between some of the words: "i can docant help myself".
 
 **Sample Analyses:**
 
