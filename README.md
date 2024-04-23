@@ -37,14 +37,16 @@ glimpse(BillboardLyrics)
     $ lyrics <chr> "sam the sham miscellaneous wooly bully wooly bully sam the sha…
     $ source <dbl> 3, 1, 1, 1, 1, 1, 3, 5, 1, 3, 3, 1, 3, 1, 3, 3, 3, 3, 1, 1, 1, …
 
-**Limitation**
+### **Limitations**
 
 Within this package, certain song lyrics exhibit irregular spacing. For
 instance, in “Wooly Bully” by Sam the Sham and the Pharaohs, there’s a
 spacing anomaly in the line “…sam the sham the pharaohs domingo…” where
-extra spaces surround “the pharaohs”.
+extra spaces surround “the pharaohs”. Also, in “I Can’t Help Myself
+Sugar Pie Honey Bunch”, for some of the lyrics there is no spacing
+between some of the words: “i can docant help myself”.
 
-**Sample Analyses:**
+### **Sample Analyses**
 
 ``` r
 BillboardLyrics |>
@@ -54,20 +56,27 @@ BillboardLyrics |>
 
     [1] "sam the sham miscellaneous wooly bully wooly bully sam the sham  the pharaohs  domingo samudio uno dos one two tres quatro matty told hatty about a thing she saw had two big horns and a wooly jaw wooly bully wooly bully wooly bully wooly bully wooly bully hatty told matty lets dont take no chance lets not belseven come and learn to dance wooly bully wooly bully wooly bully wooly bully wooly bully matty told hatty thats the thing to do get you someone really to pull the wool with you wooly bully wooly bully wooly bully wooly bully wooly bully lseven  the letter l and the number 7 when typed they form a rough square l7 so the lyrics mean lets not be square"
 
-``` r
-BillboardLyrics |>
-  head(2) |>
-  tail(1) |>
-  pull(lyrics)
-```
-
-    [1] "sugar pie honey bunch you know that i love you i cant help myself i love you and nobody elsein and out my life you come and you go leaving just your picture behind and i kissed it a thousand timeswhen you snap your finger or wink your eye i come arunning to you im tied to your apron strings and theres nothing that i can docant help myself no i cant help myselfsugar pie honey bunch im weaker than a man should be i cant help myself im a fool in love you seewanna tell you i dont love you tell you that were through and ive tried but every time i see your face i get all choked up insidewhen i call your name girl it starts the flame burning in my heart tearing it all apart no matter how i try my love i cannot hidecause sugar pie honey bunch you know that im weak for you cant help myself i love you and nobody elsesugar pie honey bunch do anything you ask me to cant help myself i want you and nobody elsesugar pie honey bunch you know that i love you i cant help myself i cant help myself"
+#### Artists with the Most Billboard Appearences
 
 ``` r
-BillboardLyrics |>
-  head(4) |>
-  tail(1) |>
-  pull(lyrics)
+top_artists <- BillboardLyrics |>
+  group_by(artist) |>
+  summarise(billboard_appearences = n()) |>
+  arrange(desc(billboard_appearences))
+
+knitr::kable(head(top_artists))
 ```
 
-    [1] "when i woke up this morning you were on my mind and you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind so i went to the corner just to ease my pains yeah just to ease my pains i got troubles whoaoh i got worries whoaoh i came home again when i woke up this morning you were on my miiiind and you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind and i got a feelin down in my shooooooes said way down in my shooooes yeah i got to ramble whoaoh i got to move on whoaoh i got to walk away my blues when i woke up this morning you were on my mind you were on my mind i got troubles whoaoh i got worries whoaoh i got wounds to bind"
+| artist          | billboard_appearences |
+|:----------------|----------------------:|
+| madonna         |                    35 |
+| elton john      |                    26 |
+| mariah carey    |                    25 |
+| janet jackson   |                    22 |
+| michael jackson |                    22 |
+| stevie wonder   |                    22 |
+
+Madonna dominated the Billboard Top 100 Charts from 1964 to 2015, making
+a remarkable 35 appearances—a feat unmatched by any other artist. In
+comparison, Elton John secured second place with a still impressive 29
+appearances.

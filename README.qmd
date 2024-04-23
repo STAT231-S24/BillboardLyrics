@@ -31,11 +31,11 @@ packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
 ```
 
-**Limitations**
+### **Limitations**
 
 Within this package, certain song lyrics exhibit irregular spacing. For instance, in "Wooly Bully" by Sam the Sham and the Pharaohs, there's a spacing anomaly in the line "...sam the sham the pharaohs domingo..." where extra spaces surround "the pharaohs". Also, in "I Can't Help Myself Sugar Pie Honey Bunch", for some of the lyrics there is no spacing between some of the words: "i can docant help myself".
 
-**Sample Analyses:**
+### **Sample Analyses**
 
 ```{r}
 BillboardLyrics |>
@@ -43,16 +43,16 @@ BillboardLyrics |>
   pull(lyrics)
 ```
 
-```{r}
-BillboardLyrics |>
-  head(2) |>
-  tail(1) |>
-  pull(lyrics)
+#### Artists with the Most Billboard Appearances
+
+```{r message = FALSE, warning = FALSE}
+top_artists <- BillboardLyrics |>
+  group_by(artist) |>
+  summarise(billboard_appearances = n()) |>
+  arrange(desc(billboard_appearances))
+
+knitr::kable(head(top_artists))
 ```
 
-```{r}
-BillboardLyrics |>
-  head(4) |>
-  tail(1) |>
-  pull(lyrics)
-```
+Madonna dominated the Billboard Top 100 Charts from 1964 to 2015, making a remarkable 35 appearances—a feat unmatched by any other artist. In comparison, Elton John secured second place with a still impressive 29 appearances.
+
