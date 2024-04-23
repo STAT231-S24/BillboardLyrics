@@ -35,6 +35,24 @@ glimpse(BillboardLyrics)
 
 Within this package, certain song lyrics exhibit irregular spacing. For instance, in "Wooly Bully" by Sam the Sham and the Pharaohs, there's a spacing anomaly in the line "...sam the sham the pharaohs domingo..." where extra spaces surround "the pharaohs". Also, in "I Can't Help Myself Sugar Pie Honey Bunch", for some of the lyrics there is no spacing between some of the words: "i can docant help myself".
 
+Number of irregular spelling occurences: 
+
+```{r}
+
+odd <- BillboardLyrics |>
+  mutate(
+    odd_lyrics = str_detect(lyrics, pattern = "(hh|aa|eee|ii|ooo|uu|yy|sss)"),
+  ) |>
+  group_by(odd_lyrics) |>
+  summarize(
+    n = n()
+  )
+odd
+
+```
+
+If odd_lyrics = true, that means there is irregular spelling. There are 2929 cases of irregular spelling. 
+
 ### **Sample Analyses**
 
 ```{r}

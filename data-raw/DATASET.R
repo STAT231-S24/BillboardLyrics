@@ -9,7 +9,7 @@ BillboardLyrics <- BillboardLyrics |>
 
 BillboardLyrics <- BillboardLyrics |>
   mutate(
-    lyrics = stringr::str_replace(word, pattern = "\\ba\\b", ""),
+    lyrics = stringr::str_replace(word, pattern = "\\ba\\b", ""), # remove stop words
     lyrics = stringr::str_replace(lyrics, pattern = "\\ban\\b", ""),
     lyrics = stringr::str_replace(lyrics, pattern = "\\band\\b", ""),
     lyrics = stringr::str_replace(lyrics, pattern = "\\bare\\b", ""),
