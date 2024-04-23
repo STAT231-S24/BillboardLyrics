@@ -56,18 +56,18 @@ BillboardLyrics |>
 
     [1] "sam the sham miscellaneous wooly bully wooly bully sam the sham  the pharaohs  domingo samudio uno dos one two tres quatro matty told hatty about a thing she saw had two big horns and a wooly jaw wooly bully wooly bully wooly bully wooly bully wooly bully hatty told matty lets dont take no chance lets not belseven come and learn to dance wooly bully wooly bully wooly bully wooly bully wooly bully matty told hatty thats the thing to do get you someone really to pull the wool with you wooly bully wooly bully wooly bully wooly bully wooly bully lseven  the letter l and the number 7 when typed they form a rough square l7 so the lyrics mean lets not be square"
 
-#### Artists with the Most Billboard Appearences
+#### Artists with the Most Billboard Appearances
 
 ``` r
 top_artists <- BillboardLyrics |>
   group_by(artist) |>
-  summarise(billboard_appearences = n()) |>
-  arrange(desc(billboard_appearences))
+  summarise(billboard_appearances = n()) |>
+  arrange(desc(billboard_appearances))
 
 knitr::kable(head(top_artists))
 ```
 
-| artist          | billboard_appearences |
+| artist          | billboard_appearances |
 |:----------------|----------------------:|
 | madonna         |                    35 |
 | elton john      |                    26 |
