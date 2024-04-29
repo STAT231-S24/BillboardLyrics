@@ -43,7 +43,7 @@ odd <- BillboardLyrics |>
   mutate(
     odd_lyrics = str_detect(lyrics, pattern = "(hh|aa|eee|ii|ooo|uu|yy|sss)"),
   ) |>
-  group_by(odd_lyrics) |>
+  filter(odd_lyrics == TRUE) |>
   summarize(
     n = n()
   )
