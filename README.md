@@ -28,15 +28,14 @@ packageVersion("BillboardLyrics")
 glimpse(BillboardLyrics)
 ```
 
-    Rows: 1,603,148
-    Columns: 7
-    $ rank   <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-    $ song   <chr> "wooly bully", "wooly bully", "wooly bully", "wooly bully", "wo…
-    $ artist <chr> "sam the sham and the pharaohs", "sam the sham and the pharaohs…
+    Rows: 5,100
+    Columns: 6
+    $ rank   <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, …
+    $ song   <chr> "wooly bully", "i cant help myself sugar pie honey bunch", "i c…
+    $ artist <chr> "sam the sham and the pharaohs", "four tops", "the rolling ston…
     $ year   <dbl> 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 196…
-    $ source <dbl> 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, …
-    $ word   <chr> "sam", "the", "sham", "miscellaneous", "wooly", "bully", "wooly…
-    $ lyrics <chr> "sam", "", "sham", "miscellaneous", "wooly", "bully", "wooly", …
+    $ lyrics <chr> "sam the sham miscellaneous wooly bully wooly bully sam the sha…
+    $ source <dbl> 3, 1, 1, 1, 1, 1, 3, 5, 1, 3, 3, 1, 3, 1, 3, 3, 3, 3, 1, 1, 1, …
 
 ### **Limitations**
 
@@ -64,7 +63,7 @@ odd
     # A tibble: 1 × 1
           n
       <int>
-    1  2929
+    1   815
 
 If odd_lyrics = true, that means there is irregular spelling. There are
 815 songs with irregular spelling.
@@ -77,7 +76,7 @@ BillboardLyrics |>
   pull(lyrics)
 ```
 
-    [1] "sam"
+    [1] "sam the sham miscellaneous wooly bully wooly bully sam the sham  the pharaohs  domingo samudio uno dos one two tres quatro matty told hatty about a thing she saw had two big horns and a wooly jaw wooly bully wooly bully wooly bully wooly bully wooly bully hatty told matty lets dont take no chance lets not belseven come and learn to dance wooly bully wooly bully wooly bully wooly bully wooly bully matty told hatty thats the thing to do get you someone really to pull the wool with you wooly bully wooly bully wooly bully wooly bully wooly bully lseven  the letter l and the number 7 when typed they form a rough square l7 so the lyrics mean lets not be square"
 
 #### Artists with the Most Billboard Appearances
 
@@ -90,14 +89,14 @@ top_artists <- BillboardLyrics |>
 knitr::kable(head(top_artists))
 ```
 
-| artist              | billboard_appearances |
-|:--------------------|----------------------:|
-| madonna             |                 10261 |
-| eminem              |                  9955 |
-| the black eyed peas |                  8899 |
-| rihanna             |                  8174 |
-| mariah carey        |                  8159 |
-| michael jackson     |                  8159 |
+| artist          | billboard_appearances |
+|:----------------|----------------------:|
+| madonna         |                    35 |
+| elton john      |                    26 |
+| mariah carey    |                    25 |
+| janet jackson   |                    22 |
+| michael jackson |                    22 |
+| stevie wonder   |                    22 |
 
 Madonna dominated the Billboard Top 100 Charts from 1964 to 2015, making
 a remarkable 35 appearances—a feat unmatched by any other artist. In
