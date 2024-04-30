@@ -22,7 +22,7 @@ The BillboardLyrics package can be installed by running:
 packageVersion("BillboardLyrics")
 ```
 
-    [1] '0.7'
+    [1] '0.8'
 
 ``` r
 glimpse(BillboardLyrics)
@@ -47,28 +47,27 @@ extra spaces surround “the pharaohs”. Also, in “I Can’t Help Myself
 Sugar Pie Honey Bunch”, for some of the lyrics there is no spacing
 between some of the words: “i can docant help myself”.
 
-Number of irregular spelling occurences:
+Number of irregular spelling occurrences:
 
 ``` r
 odd <- BillboardLyrics |>
   mutate(
     odd_lyrics = str_detect(lyrics, pattern = "(hh|aa|eee|ii|ooo|uu|yy|sss)"),
   ) |>
-  group_by(odd_lyrics) |>
+  filter(odd_lyrics == TRUE) |>
   summarize(
     n = n()
   )
 odd
 ```
 
-    # A tibble: 3 × 2
-      odd_lyrics       n
-      <lgl>        <int>
-    1 FALSE      1599969
-    2 TRUE          2929
-    3 NA             250
+    # A tibble: 1 × 1
+          n
+      <int>
+    1  2929
 
-If odd_lyrics = true, that means there is irregular spelling.
+If odd_lyrics = true, that means there is irregular spelling. There are
+2929 cases of irregular spelling.
 
 ### **Sample Analyses**
 
