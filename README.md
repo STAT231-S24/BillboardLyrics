@@ -67,7 +67,7 @@ odd
     1  2929
 
 If odd_lyrics = true, that means there is irregular spelling. There are
-2929 cases of irregular spelling.
+815 songs with irregular spelling.
 
 ### **Sample Analyses**
 
