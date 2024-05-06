@@ -13,6 +13,7 @@ editor: source
 library(tidyverse)
 library(mosaic)
 library(BillboardLyrics)
+library(tidytext)
 ```
 
 This file describes the BillboardLyrics package.
@@ -73,4 +74,5 @@ knitr::kable(head(top_artists))
 ```
 
 Madonna dominated the Billboard Top 100 Charts from 1964 to 2015, making a remarkable 35 appearances—a feat unmatched by any other artist. In comparison, Elton John secured second place with a still impressive 29 appearances.
+
 

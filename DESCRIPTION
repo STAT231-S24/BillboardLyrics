@@ -1,7 +1,7 @@
 Package: BillboardLyrics
 Date: 2024-04-23
 Title: Rankings of the Top 100 Billboard Songs from 1964 to 2015
-Version: 0.8
+Version: 0.9
 Authors@R: 
     person(
       given = "Vy",
